@@ -1,0 +1,12 @@
+version: "1"
+services:
+  hemo-bot:
+    type: worker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - ADMIN_ID=${ADMIN_ID}
